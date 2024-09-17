@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-size: 1rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+}
+img {
+    max-width: 100%;
+}
+ /* Typography */
+    
+h1{
+    margin-top: 0;
+    color: brown;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+h1 + p{
+    color: orange;
+    font-size: 1.75rem;
+}
+h1 span{
+    font-weight: 900;
+}
+h2{
+    font-size: 1.35rem;
+    color: brown;
+    margin: 0;
+}
+h2 + p{
+    color: orange;
+    font-weight: 900;
+    margin-top: 0;
+}
+.fine-print{
+    font-size: .625rem;
+}
+ /* layout */
+ .intro{
+     background-color: #404040;
+     width: 100%;
+     background-image: url(images/ribs.jpg);
+     background-size: cover;
+     background-position: center;
+     background-blend-mode: multiply;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     color: #fff;
+     min-height: 50vh;
+     padding:0 2em;
+ }
+ .top-text{
+     order: -1;
+     color: orange;
+     margin-top: 0;
+     border-top: 5px solid orange;
+     letter-spacing: 1px;
+     font-size: 0.75rem;
+     font-weight: 900;
+ }
+ .intro > *,
+ .main-content > *{
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+ }
+.main-content{
+    padding: 2em 1em;
+}
+/* form */
+.email-collector{
+    width: 80%;
+    max-width: 300px;
+}
+input,
+.btn{
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+}
+input{
+    margin-bottom: .75em;
+    padding: .25em;
+    border: 1px solid #404040;
+    font-family: inherit;
+    transition: transform 250ms;
+    transform: scale(1);
+}
+input:focus{
+    transform: scale(1.1);
+}
+.btn{
+    padding: 1em 1.5em;
+    font-family: inherit;
+    display: inline-block;
+    letter-spacing: 1px;
+    font-weight: 900;
+    font-size: .625rem;
+    border: 0;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.btn-primary{
+    background-image: linear-gradient(90deg, orange,black);
+    transition: color 500ms;
+    transform: scale(1);
+}
+.btn-primary:hover,
+.btn-primary:focus{
+    color: #404040;
+    transform: scale(1.1);
+}
+/* media query */
+@media (min-width:600px) {
+    .container-flex{
+        display: flex;
+    }
+    .intro,
+    .main-content{
+        width: 50%;
+        min-height: 100vh;
+    }
+    .main-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    h1{
+        font-size: 3.5rem;
+    }
+    h2,
+    h1+p{
+        font-size: 1.75rem;
+    }
+}
